@@ -10,13 +10,12 @@ use App\movie;
 class maincontroller extends Controller
 {
     public function index(){
+    	$movies = movie::now_playing();
+    	$movies = $movies['results'];
+    	$imgurl = "http://image.tmdb.org/t/p/original"; //use backdrop_path to get picture
+    	
     	return view('pages.index');
     }
 
-    public function test(){
-    	$movies = movie::now_playing();
-    	var_dump($movies);
-    	die();
-    }
 }
 
