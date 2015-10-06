@@ -10,7 +10,7 @@
 
     <title>Movie App</title>
 
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <link href="carousel.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
   </head>
