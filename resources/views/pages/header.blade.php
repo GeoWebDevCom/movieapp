@@ -13,4 +13,5 @@
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
     <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>

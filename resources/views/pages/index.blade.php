@@ -1,60 +1,47 @@
 @extends('pages.header')
-    <!-- Carousel
-    ================================================== -->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">movieApp</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search a movie">
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+  
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
+
+      <div class="carousel-inner" role="listbox" value = "{{$moviefirst['original_title']}}">
 
         <div class="item active">
-          <img class="seventh-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img class="seventh-slide" id = "movieimg" src="{{$imgurl.$moviefirst['backdrop_path']}}" alt="First slide" >
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+        
+        @foreach($movies as $movie)
+        <div class="item" value = "{{$movie['original_title']}}">
+          <img class="first-slide" id = "movieimg" src="{{$imgurl.$movie['backdrop_path']}}" alt="Second slide" >
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <img class="fourth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-
+        @endforeach
 
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -67,4 +54,21 @@
       </a>
     </div><!-- /.carousel -->
 
+    <h2 id = "sectionheader">Top Rated</h2>
+
+    <div class="container marketing" id = "top-rated">
+ 
+      <div class="row">
+        @foreach($toprated as $top)
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{$imgurl.$top['backdrop_path']}}" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{$top['original_title']}}</h2>
+          <p>{{$top['overview']}}</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+         @endforeach
+      </div>
+     
+  <hr class = "featurette-divider">
+    
     @extends('pages.footer')

@@ -1,0 +1,21 @@
+nav {
+	position: absolute;
+}
+
+#myCarousel{
+	padding-top: 50px;
+	position: relative;
+}
+
+#top-rated{
+	padding-top: 30px;
+}
+
+.img-circle{
+	border-radius: 0;
+}
+
+#sectionheader {
+	text-align: center;
+	padding-top: 10px;
+}
