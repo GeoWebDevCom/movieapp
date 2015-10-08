@@ -63,7 +63,7 @@
         <div class="col-lg-4">
           <img class="img-circle" src="{{$imgurl.$top['backdrop_path']}}" alt="Generic placeholder image" width="140" height="140">
           <h2>{{$top['original_title']}}</h2>
-          <p>{{$top['overview']}}</p>
+          <p>{{$top['vote_average']}}/10 <br> {{$top['vote_count']}} Votes</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
          @endforeach

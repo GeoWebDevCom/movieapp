@@ -29,8 +29,6 @@ class movie extends Model
     	$toprated = json_decode($toprated, true);
     	$toprated = $toprated['results'];
 
-    	$toprated = array_slice($toprated, 0, 3);
-
     	return $toprated;
 
     }
