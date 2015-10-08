@@ -20,5 +20,11 @@ class maincontroller extends Controller
     	return view('pages.index', compact(array('moviefirst', 'movies', 'imgurl', 'toprated')));
     }
 
+    public function movie_details($id){
+    	$info = movie::get_info($id);
+
+    	dd($info);
+    }
+
 }
 

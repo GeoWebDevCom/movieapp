@@ -11,3 +11,5 @@
 |
 */
 Route::get('/', "maincontroller@index");
+
+Route::get('{id}', "maincontroller@movie_details");

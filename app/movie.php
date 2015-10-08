@@ -32,4 +32,13 @@ class movie extends Model
     	return $toprated;
 
     }
+
+    public static function get_info($id){
+        $info = file_get_contents("https://api.themoviedb.org/3/movie/$id?api_key=ed85f5d2d688e1a2deb331c752f3dd14");
+        $info = html_entity_decode($info);
+        $info = json_decode($info, true);
+
+        return $info;
+
+    }
 }
