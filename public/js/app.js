@@ -1,4 +1,4 @@
-$(".item, .item.active").click(function() {
+$("#getdetails").click(function() {
 	var title = $(this).attr('value');
 	console.log(title);
 });
