@@ -23,7 +23,7 @@ class maincontroller extends Controller
     public function movie_details($id){
     	$info = movie::get_info($id);
 
-    	dd($info);
+    	return view('pages.info', compact('info'));
     }
 
 }
