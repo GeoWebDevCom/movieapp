@@ -26,7 +26,9 @@
       <div class="carousel-inner" role="listbox" value = "{{$moviefirst['original_title']}}">
 
         <div class="item active">
-          <img class="seventh-slide" id = "movieimg" src="{{$imgurl.$moviefirst['backdrop_path']}}" alt="First slide" >
+
+          <a href="{{$moviefirst['id']}}"><img class="seventh-slide" id = "movieimg" src="{{$imgurl.$moviefirst['backdrop_path']}}" alt="First slide" >
+          </a>
           <div class="container">
             <div class="carousel-caption">
             </div>
@@ -35,7 +37,9 @@
         
         @foreach($movies as $movie)
         <div class="item" value = "{{$movie['original_title']}}">
+          <a href="{{$movie['id']}}">
           <img class="first-slide" id = "movieimg" src="{{$imgurl.$movie['backdrop_path']}}" alt="Second slide" >
+          </a>
           <div class="container">
             <div class="carousel-caption">
             </div>
