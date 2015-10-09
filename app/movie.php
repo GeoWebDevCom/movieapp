@@ -41,4 +41,8 @@ class movie extends Model
         return $info;
 
     }
+
+    public static function search_movie($title){
+        //search movie
+    }
 }
