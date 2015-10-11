@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\movie;
+use App\comments;
 
 class maincontroller extends Controller
 {
@@ -22,6 +23,8 @@ class maincontroller extends Controller
 
     public function movie_details($id){
     	$info = movie::get_info($id);
+        $credits = movie::get_credits($id);
+        dd($credits);
         $comments = comments::get_comments($id);
 
     	return view('pages.info', compact(array('info', 'comments')));

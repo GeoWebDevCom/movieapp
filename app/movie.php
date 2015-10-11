@@ -45,4 +45,12 @@ class movie extends Model
     public static function search_movie($title){
         //search movie
     }
+
+    public static function get_credits($id){
+        $credits = file_get_contents("http://api.themoviedb.org/3/movie/$id/credits?api_key=ed85f5d2d688e1a2deb331c752f3dd14");
+        $credits = html_entity_decode($credits);
+        $credits = json_decode($credits, true);
+
+        return $credits;
+    }
 }
