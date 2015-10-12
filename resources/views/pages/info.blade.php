@@ -21,7 +21,7 @@
 
 <div id = "comment-form" class = "form-group">
 
-{!! Form::open() !!}
+{!! Form::open(array('url' => "/".$info['id'])) !!}
 
 <div class = "form-group" id = "user">
 {!! Form::text('user') !!}

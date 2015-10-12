@@ -29,7 +29,8 @@ class maincontroller extends Controller
     	return view('pages.info', compact(array('info', 'comments')));
     }
 
-    public function upload_comment($id){
+    public function upload_comment($id, Request $request){
+        dd($request->get('comment'));
         return "hello";
     }
 

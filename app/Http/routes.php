@@ -13,3 +13,5 @@
 Route::get('/', "maincontroller@index");
 
 Route::get('{id}', "maincontroller@movie_details");
+
+Route::post('{id}', "maincontroller@upload_comment");
