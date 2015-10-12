@@ -12,5 +12,26 @@
 
 <p>{{$info['overview']}}</p>
 
+<div id = "comments">
+
+
+</div>
+
+<div id = "comment-form" class = "form-group">
+
+{!! Form::open() !!}
+
+{!! Form::text('user') !!}
+
+{!! Form::textarea('comment') !!}
+
+{!! Form::submit('Add Comment') !!}
+
+{!! Form::hidden('id', "{{ $info['id'] }}") !!}
+
+{!! Form::close() !!}
+
+<div>
+
 
 @extends('pages.footer')

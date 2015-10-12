@@ -24,10 +24,13 @@ class maincontroller extends Controller
     public function movie_details($id){
     	$info = movie::get_info($id);
         $credits = movie::get_credits($id);
-        dd($credits);
         $comments = comments::get_comments($id);
 
     	return view('pages.info', compact(array('info', 'comments')));
+    }
+
+    public function add_comment(){
+        return "hello";
     }
 
 }
