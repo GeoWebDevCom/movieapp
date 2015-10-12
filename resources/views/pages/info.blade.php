@@ -21,7 +21,7 @@
 
 <div id = "comment-form" class = "form-group">
 
-{!! Form::open(array('action' => 'maincontroller@upload_comment')) !!}
+{!! Form::open() !!}
 
 <div class = "form-group" id = "user">
 {!! Form::text('user') !!}
@@ -38,7 +38,7 @@
 
 {!! Form::close() !!}
 
-<div>
+</div>
 
 
 @extends('pages.footer')
