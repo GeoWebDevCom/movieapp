@@ -17,17 +17,24 @@
 
 </div>
 
+<hr class = "featurette-divider">
+
 <div id = "comment-form" class = "form-group">
 
-{!! Form::open() !!}
+{!! Form::open(array('action' => 'maincontroller@upload_comment')) !!}
 
+<div class = "form-group" id = "user">
 {!! Form::text('user') !!}
+</div>
 
+
+<div class = "form-group">
 {!! Form::textarea('comment') !!}
+</div>
+
+{!! Form::hidden('id', $info['id'] ) !!}
 
 {!! Form::submit('Add Comment') !!}
-
-{!! Form::hidden('id', '{{$info['id']}}') !!}
 
 {!! Form::close() !!}
 
