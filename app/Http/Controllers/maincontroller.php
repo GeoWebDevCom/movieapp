@@ -30,8 +30,11 @@ class maincontroller extends Controller
     }
 
     public function upload_comment($id, Request $request){
-        dd($request->get('comment'));
-        return "hello";
+        $comment = $request->get('comment');
+        $user = $request->get('user');
+        $date = date('m-d-y');
+        
+        comments::add_comment($id, $comment, $date, $user);
     }
 
 }
