@@ -27,7 +27,7 @@
 
 {!! Form::submit('Add Comment') !!}
 
-{!! Form::hidden('id', "{{ $info['id'] }}") !!}
+{!! Form::hidden('id', '{{$info['id']}}') !!}
 
 {!! Form::close() !!}
 
