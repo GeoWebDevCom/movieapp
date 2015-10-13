@@ -12,6 +12,17 @@
 
 <p>{{$info['overview']}}</p>
 
+<div id = "cast">
+	<h3>Credits</h3>
+
+	@foreach($credits as $credit)
+
+	<p>{{  $credit['name'] }} as {{ $credit['character'] }}</p>
+	
+	@endforeach
+
+</div>
+
 <hr class = "featurette-divider">
 
 <div id = "comments">
@@ -26,7 +37,6 @@
 	<p>{{ $comment->date_posted }}</p>
 
 	@endforeach
-
 
 </div>
 

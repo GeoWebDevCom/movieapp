@@ -26,7 +26,7 @@ class maincontroller extends Controller
         $credits = movie::get_credits($id);
         $comments = comments::get_comments($id);
 
-    	return view('pages.info', compact(array('info', 'comments')));
+    	return view('pages.info', compact(array('info', 'comments', 'credits')));
     }
 
     public function upload_comment($id, Request $request){

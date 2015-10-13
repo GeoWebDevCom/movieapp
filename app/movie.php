@@ -51,6 +51,6 @@ class movie extends Model
         $credits = html_entity_decode($credits);
         $credits = json_decode($credits, true);
 
-        return $credits;
+        return $credits['cast'];
     }
 }
