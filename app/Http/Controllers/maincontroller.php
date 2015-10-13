@@ -32,9 +32,11 @@ class maincontroller extends Controller
     public function upload_comment($id, Request $request){
         $comment = $request->get('comment');
         $user = $request->get('user');
-        $date = date('m-d-y');
-        
+        $date = date('y-m-d');
+
         comments::add_comment($id, $comment, $date, $user);
+
+        return redirect()->action('maincontroller@movie_details', $id);
     }
 
 }

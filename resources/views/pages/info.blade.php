@@ -12,7 +12,20 @@
 
 <p>{{$info['overview']}}</p>
 
+<hr class = "featurette-divider">
+
 <div id = "comments">
+
+	<h3>Comments</h3>
+	@foreach($comments as $comment)
+
+	<h5>{{ $comment->posted_by }}</h5>
+
+	<p>{{ $comment->Comment }}</p>
+
+	<p>{{ $comment->date_posted }}</p>
+
+	@endforeach
 
 
 </div>

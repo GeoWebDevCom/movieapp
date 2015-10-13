@@ -16,10 +16,10 @@ class comments extends Model
 
     public static function add_comment($id, $comment, $date, $user){
     	DB::table('comments')->insert([
-    		'movie_id'	=>	'$id',
-    		'comment'	=>	'$comment',
-    		'date_posted'	=>	'$date',
-    		'posted_by'	=>	'$user'
+    		'movie_id'	=>	$id,
+    		'Comment'	=>	$comment,
+    		'date_posted'	=>	$date,
+    		'posted_by'	=>	$user
     		]);
     }
     
