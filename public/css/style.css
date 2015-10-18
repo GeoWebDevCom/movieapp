@@ -46,3 +46,7 @@ nav {
 #comments{
 	text-align: center;
 }
+
+#comment {
+	border: 2px solid black;
+}

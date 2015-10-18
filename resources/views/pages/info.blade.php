@@ -29,14 +29,17 @@
 
 	<h3>Comments</h3>
 	@foreach($comments as $comment)
+	<div id = "comment">
 
 	<h5>{{ $comment->posted_by }}</h5>
 
-	<p>{{ $comment->Comment }}</p>
+	<p>{{ $comment->comment }}</p>
 
 	<p>{{ $comment->date_posted }}</p>
+	</div>
 
 	@endforeach
+
 
 </div>
 
